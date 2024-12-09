@@ -347,6 +347,9 @@ class CachedVideoPlayerController
           break;
         case VideoEventType.unknown:
           break;
+        case VideoEventType.isPlayingStateUpdate:
+          value = value.copyWith(buffered: event.buffered);
+          break;
       }
     }
 
